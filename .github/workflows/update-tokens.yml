@@ -21,10 +21,17 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: '20'  # Atualizado para Node.js 20
+
+      - name: Verificar versão do Node.js
+        run: node --version  # Confirmação de que a versão 20 foi instalada
 
       - name: Install dependencies
         run: npm ci
+
+      # Etapa opcional para garantir que as dependências estejam atualizadas
+      - name: Update dependencies (optional)
+        run: npm update
 
       - name: Build
         run: npm run build

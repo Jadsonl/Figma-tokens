@@ -34,7 +34,7 @@ jobs:
         run: npm update
 
       - name: Build
-        run: npm run build
+        run: npm run build --verbose 
 
       - name: Create PR
         uses: peter-evans/create-pull-request@v4

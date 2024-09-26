@@ -42,5 +42,6 @@ jobs:
           title: ${{ github.event.client_payload.commitMessage || 'Update design tokens' }}
           body: 'Design tokens have been updated via Figma and need to be reviewed.'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ou use PERSONAL_ACCESS_TOKEN se necessário
-          BRANCH_NAME: 'main'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ou use PERSONAL_ACCESS_TOKEN se necessári
+          BRANCH: 'create-pull-request/patch'
+          continue-on-error: true  # Adiciona tolerância a erro

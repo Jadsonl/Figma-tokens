@@ -35,6 +35,6 @@ jobs:
           commit-message: "style: Update design tokens"
           title: ${{ github.event.client_payload.commitMessage || 'Update design tokens' }}
           body: "Design tokens have been updated via Figma and need to be reviewed."
+          branch: 'create-pull-request/update-tokens'  # Nome do branch criado para o PR
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: 'main'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Usa o token configurado no repo
